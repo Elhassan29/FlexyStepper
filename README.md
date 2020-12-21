@@ -15,14 +15,14 @@ For documentation and a hookup guide, go to:
 ​    https://github.com/Stan-Reifel/FlexyStepper
 
 # New Functions:
->  void setInitialSpeedInStepsPerSecond(float InitialSpeedInStepsPerSecond);
-	void setFinalSpeedInStepsPerSecond(float FinalSpeedInStepsPerSecond);
+>   void setInitialSpeedInStepsPerSecond(float InitialSpeedInStepsPerSecond);
+>	void setFinalSpeedInStepsPerSecond(float FinalSpeedInStepsPerSecond);
 	
 >	void setInitialSpeedInRevolutionsPerSecond(float InitialSpeedInRevolutionsPerSecond);
-	void setFinalSpeedInRevolutionsPerSecond(float FinalSpeedInRevolutionsPerSecond);
+>	void setFinalSpeedInRevolutionsPerSecond(float FinalSpeedInRevolutionsPerSecond);
 
 >	void setInitialSpeedInMillimetersPerSecond(float InitialSpeedInMillimetersPerSecond);
-	void setFinalSpeedInMillimetersPerSecond(float FinalSpeedInMillimetersPerSecond);
+>	void setFinalSpeedInMillimetersPerSecond(float FinalSpeedInMillimetersPerSecond);
 
 ## How to use:
 Just Initialize your Initial and Final Speed Anytime
