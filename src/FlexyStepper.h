@@ -53,7 +53,6 @@ class FlexyStepper
     void setStepsPerMillimeter(float motorStepPerMillimeter);
     float getCurrentPositionInMillimeters();
     void setCurrentPositionInMillimeters(float currentPositionInMillimeters);
-    void setCurrentPositionInMillimeter(float currentPositionInMillimeter);
     void setSpeedInMillimetersPerSecond(float speedInMillimetersPerSecond);
 	void setInitialSpeedInMillimetersPerSecond(float InitialSpeedInMillimetersPerSecond);
 	void setFinalSpeedInMillimetersPerSecond(float FinalSpeedInMillimetersPerSecond);
@@ -94,6 +93,8 @@ class FlexyStepper
     bool motionComplete();
     float getCurrentVelocityInStepsPerSecond(); 
     bool processMovement(void);
+	float getFinalSpeedInSteps();
+	float getCurrentSpeedInSteps();
 
 
   private:
@@ -124,6 +125,7 @@ class FlexyStepper
     float nextStepPeriod_InUS;
     unsigned long lastStepTime_InUS;
     float currentStepPeriod_InUS;
+	float finalSpeedinSteps;
 };
 
 // ------------------------------------ End ---------------------------------

@@ -225,6 +225,7 @@ FlexyStepper::FlexyStepper()
   nextStepPeriod_InUS = 0.0;
   initialPeriod_InUSPerStep = 1000000;
   finalPeriod_InUSPerStep = 1000000;
+  finalSpeedinSteps = 0;
 }
 
 
@@ -1045,6 +1046,13 @@ bool FlexyStepper::processMovement(void)
     //
     // at final position, make sure the motor is not going too fast
     //
+	  if (currentStepPeriod_InUS == 0) {
+		  finalSpeedinSteps = 0;
+	  }
+	  else {
+		  finalSpeedinSteps = 1000000 / currentStepPeriod_InUS;
+	  }
+	  
 	  currentStepPeriod_InUS = 0.0;
 	  nextStepPeriod_InUS = 0.0;
 	  directionOfMotion = 0;
@@ -1260,6 +1268,18 @@ void FlexyStepper::DeterminePeriodOfNextStep()
   }
 }
 
+float FlexyStepper::getFinalSpeedInSteps() {
+	return finalSpeedinSteps;
+}
+float FlexyStepper::getCurrentSpeedInSteps() {
+	if (currentStepPeriod_InUS == 0) {
+		return 0;
+	}
+	else {
+		return 1000000 / currentStepPeriod_InUS;
+	}
+	
+}
 
 
 // -------------------------------------- End --------------------------------------

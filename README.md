@@ -1,3 +1,4 @@
+
 # Modified - FlexyStepper - Arduino Library
 
 This library is used to control one or more stepper motors.  The motors are accelerated and decelerated as they travel to their destination.  The library has been optimized for flexible control where speeds and positions can be changed while in-motion.
@@ -16,14 +17,26 @@ For documentation and a hookup guide, go to:
 
 # New Functions:
 >   void setInitialSpeedInStepsPerSecond(float InitialSpeedInStepsPerSecond);
+
+to Set Desired Initial Speed in Steps/Seconds
 >	void setFinalSpeedInStepsPerSecond(float FinalSpeedInStepsPerSecond);
-	
+
+to Set Desired Final Speed in Steps/Seconds
 >	void setInitialSpeedInRevolutionsPerSecond(float InitialSpeedInRevolutionsPerSecond);
+
+to Set Desired Initial Speed in Revolutions/Seconds
 >	void setFinalSpeedInRevolutionsPerSecond(float FinalSpeedInRevolutionsPerSecond);
 
+to Set Desired Final Speed in Revolutions/Seconds
 >	void setInitialSpeedInMillimetersPerSecond(float InitialSpeedInMillimetersPerSecond);
+>
+to Set Desired Initial Speed in Millimeters/Seconds
 >	void setFinalSpeedInMillimetersPerSecond(float FinalSpeedInMillimetersPerSecond);
 
+to Set Desired Final Speed in Millimeters/Seconds
+> getFinalSpeedInSteps();
+
+Return (float) Final Speed in Steps/Second
 ## How to use:
 Just Initialize your Initial and Final Speed Anytime
 
